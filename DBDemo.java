@@ -63,14 +63,14 @@ class Table1 extends javax.swing.JFrame {
               //     "VALUES ('1PE15CS139', 'Saptarshi',20,'ATC','saptarshidutta@gmail.com')";
                 //    stmt.executeUpdate(sql);
             try{
-			FileInputStream fstream = new FileInputStream("test.txt");
+			FileInputStream fstream = new FileInputStream("test.csv");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine = " ";
             //int j=0;
            
             while ((strLine = br.readLine()) != null)   
         {
-            StringTokenizer st = new StringTokenizer(strLine," ");  
+            StringTokenizer st = new StringTokenizer(strLine,",");  
             
             usn = st.nextToken();
             name= st.nextToken();
